@@ -1,2 +1,2 @@
 # Zendesk-Reporting-Shell
-The shell creates ticket reports and send emails to specific recipients
+Using the shell, you can get reports to your email about tickets state in Zendesk according to a specific view.
