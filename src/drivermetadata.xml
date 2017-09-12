@@ -1,0 +1,69 @@
+<Driver Description="Describe the purpose of your CloudShell shell" MainClass="driver.ZendeskReportingShellDriver" Name="ZendeskReportingShellDriver" Version="1.0.0">
+    <Layout>
+        <Category Name="Hidden Commands">
+            <Command Description="" DisplayName="Orchestration Save" Name="orchestration_save" />
+            <Command Description="" DisplayName="Orchestration Restore" Name="orchestration_restore" />
+            <Command Description="" DisplayName="Create A Session" Name="create_a_session" />
+            <Command Description="" DisplayName="" Name="get_global_inputs" />
+            <Command Description="" DisplayName="" Name="create_tickets_matrix" />
+            <Command Description="" DisplayName="" Name="get_audit_creation_time" />
+            <Command Description="" DisplayName="" Name="calculate_time_delta" />
+            <Command Description="" DisplayName="" Name="calculate_ticket_age" />
+            <Command Description="" DisplayName="" Name="create_tickets_wait_time_matrix" />
+            <Command Description="" DisplayName="" Name="create_priorities_vector_and_priority_age_matrix" />
+            <Command Description="" DisplayName="" Name="create_SLACompVector_and_SLAMap" />
+            <Command Description="" DisplayName="" Name="detrmine_style" />
+            <Command Description="" DisplayName="" Name="sendemail" />
+        </Category>
+        <Category Name="Operations">
+            <Command Description="" DisplayName="Enter Zendesk User Credentials" Name="user_credentials" >
+                <Parameters>
+                    <Parameter Name="user" Type="String"  Mandatory ="True" DefaultValue="" DisplayName="User Name"
+                               Description="Please enter your user name"/>
+                    <Parameter Name="pwd" Type="String"  Mandatory ="True" DefaultValue="" DisplayName="User Password"
+                               Description="Please enter your user password"/>
+                </Parameters>
+            </Command>
+            <Command Description="" DisplayName="Zendesk Queues Extended" Name="Zendesk_Queues_Extended" >
+                <Parameters>
+                    <Parameter Name="user_input" Type="Lookup"  Mandatory ="True" DefaultValue="RnD" DisplayName="Report Type"
+                               AllowedValues="RnD,Product,Customer Success,RM,TnD,Bugs,Features" Description="Please select the type of report that you would like to run"/>
+                </Parameters>
+            </Command>
+        </Category>
+        <Category Name="Help Operations">
+            <Command Description="Updating Global Inputs" DisplayName="Update Global Inputs" Name="update_global_inputs" >
+                <Parameters>
+                    <Parameter Name="input_user_mail" Type="String" Mandatory = "True" DefaultValue="" DisplayName="User Email"
+                               Description="Enter User Email"/>
+                    <Parameter Name="input_user_pwd" Type="String" Mandatory = "True" DefaultValue="" DisplayName="User Password"
+                               Description="Enter User Password"/>
+                </Parameters>
+            </Command>
+            <Command Description="" DisplayName="Get All View Tickets" Name="get_all_view_tickets" >
+                <Parameters>
+                    <Parameter Name="input_user_name" Type="String" Mandatory = "True" DefaultValue="" DisplayName="User Name"
+                               Description="Enter User Name"/>
+                    <Parameter Name="input_user_email" Type="String" Mandatory = "True" DefaultValue="" DisplayName="User Email"
+                               Description="Enter User Email"/>
+                    <Parameter Name="input_user_role" Type="String" Mandatory = "False" DefaultValue="" DisplayName="User Role"
+                               Description="Enter User Role"/>
+                    <Parameter Name="input_user_org" Type="String" Mandatory = "False" DefaultValue="" DisplayName="User Organization ID"
+                               Description="Enter User Organization ID"/>
+                </Parameters>
+            </Command>
+            <Command Description="" DisplayName="Get All Views Titles, Number Of Tickets And Tickets ID" Name="get_all_views_titles_number_of_tickets_and_tickets_id" >
+                <Parameters>
+                    <Parameter Name="input_user_name" Type="String" Mandatory = "True" DefaultValue="" DisplayName="User Name"
+                               Description="Enter User Name"/>
+                    <Parameter Name="input_user_email" Type="String" Mandatory = "True" DefaultValue="" DisplayName="User Email"
+                               Description="Enter User Email"/>
+                    <Parameter Name="input_user_role" Type="String" Mandatory = "False" DefaultValue="" DisplayName="User Role"
+                               Description="Enter User Role"/>
+                    <Parameter Name="input_user_org" Type="String" Mandatory = "False" DefaultValue="" DisplayName="User Organization ID"
+                               Description="Enter User Organization ID"/>
+                </Parameters>
+            </Command>
+        </Category>
+    </Layout>
+</Driver>
